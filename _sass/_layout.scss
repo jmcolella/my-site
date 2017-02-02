@@ -1,0 +1,76 @@
+/* CONTAINERS */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: $primary-font;
+}
+
+.section {
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+// this is for sticky footer; content is a 'container' for all of the content
+.content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 85%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Posts
+ */
+.post-header {
+    margin-bottom: $spacing-unit;
+}
+
+.post-title {
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1;
+
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
+}
+
+.post-content {
+    margin-bottom: $spacing-unit;
+
+    h2 {
+        font-size: 32px;
+
+        @include media-query($on-laptop) {
+            font-size: 28px;
+        }
+    }
+
+    h3 {
+        font-size: 26px;
+
+        @include media-query($on-laptop) {
+            font-size: 22px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+
+        @include media-query($on-laptop) {
+            font-size: 18px;
+        }
+    }
+}

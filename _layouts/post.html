@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<div class='page'>
+
+  <div class='container'>
+    <div class='section'>
+
+      <div class='page-content'>
+        <div class='blog'>
+          <h1 class='post-title'>{{ page.title }}</h1>
+          <div class='test-em'>
+          {{ content }}
+        </div>
+
+          <div class='fadein'>Hello</div>
+
+          <p class='blog-back-link'><a href='/blog'>return to blog</a></p>
+        </div>
+      </div>
+
+      <div class='page-sidebar'>
+        <div class='fixed-sidebar'>
+          <img class='sidebar-headshot' src='/img/headshot.jpg'>
+
+          <div class='sidebar-content'>
+            <p class='left-align'>full stack developer residing in Brooklyn, NY</p>
+            <p class='left-align'>using React, JavaScript and Rails to build meaningful and useful apps</p>
+            <p class='right-align'>please feel free to reach out at any time</p>
+            <p class='right-align'>i am always open to new opportunities for collaboration</p>
+            <p class='right-align'><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

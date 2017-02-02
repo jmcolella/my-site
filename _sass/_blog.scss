@@ -1,0 +1,86 @@
+/*** BLOG ***/
+.blog {
+  text-align: left;
+
+  @include media-query( #{map-get( $breakpoints, 'small' )} ) {
+    margin-left: 40px;
+  }
+}
+
+.blog-title,
+.post-title {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $lime-green;
+}
+
+.blog-list {
+  list-style: none;
+
+  li {
+    margin-left: 30px;
+  }
+}
+
+.blog-back-link {
+  margin-top: 20px;
+  text-align: right;
+}
+
+// ignore all of this - playing around for PG interview
+// .test-em {
+//   font-size: 20px;
+//
+//   p {
+//     font-size: (15px / 20px) * 1em;
+//   }
+// }
+//
+// .fadein {
+//   // margin-top: 5rem;
+//   height: 200px;
+//   width: 200px;
+//   background-color: red;
+//   -webkit-animation: fadein 2s;
+//      -moz-animation: fadein 2s;
+//       -ms-animation: fadein 2s;
+//        -o-animation: fadein 2s;
+//           animation: fadein 2s;
+//   animation-fill-mode: forwards;
+//   // animation-iteration-count: infinite;
+// }
+//
+// @-webkit-keyframes fadein {
+//   0% { opacity: 0; margin-top: 0; margin-left: 0 }
+//   25% { opacity: 0.5; margin-top: 5rem; margin-left: 0 }
+//   50% { opacity: 0.75; margin-top: 5rem; margin-left: 0 }
+//   100% { opacity: 1; margin-top: 5rem; margin-left: 5rem }
+// }
+//
+// @-moz-keyframes fadein {
+//   0% { opacity: 0; margin-top: 0; margin-left: 0 }
+//   25% { opacity: 0.5; margin-top: 5rem; margin-left: 0 }
+//   50% { opacity: 0.75; margin-top: 5rem; margin-left: 0 }
+//   100% { opacity: 1; margin-top: 5rem; margin-left: 5rem }
+// }
+//
+// @-ms-keyframes fadein {
+//   0% { opacity: 0; margin-top: 0; margin-left: 0 }
+//   25% { opacity: 0.5; margin-top: 5rem; margin-left: 0 }
+//   50% { opacity: 0.75; margin-top: 5rem; margin-left: 0 }
+//   100% { opacity: 1; margin-top: 5rem; margin-left: 5rem }
+// }
+//
+// @-o-keyframes fadein {
+//   0% { opacity: 0; margin-top: 0; margin-left: 0 }
+//   25% { opacity: 0.5; margin-top: 5rem; margin-left: 0 }
+//   50% { opacity: 0.75; margin-top: 5rem; margin-left: 0 }
+//   100% { opacity: 1; margin-top: 5rem; margin-left: 5rem }
+// }
+//
+// @keyframes fadein {
+//   0% { opacity: 0; margin-top: 0; margin-left: 0 }
+//   25% { opacity: 0.5; margin-top: 5rem; margin-left: 0 }
+//   50% { opacity: 0.75; margin-top: 5rem; margin-left: 0 }
+//   100% { opacity: 1; margin-top: 5rem; margin-left: 5rem }
+// }

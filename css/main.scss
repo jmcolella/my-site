@@ -1,0 +1,75 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+/* VARIABLES */
+
+// colors
+$lime-green: #6fbf64;
+$black: #000;
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 15%);
+$background-color: #fdfdfd;
+
+// Fonts
+$primary-font: ( 'Raleway', sans-serif );
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+
+// Spacing
+$base-line-height: 1.5;
+$spacing-unit:     30px;
+
+
+
+/* BREAKPOINTS */
+$breakpoints: (
+  'tiny': 300px,
+  'x-small': 480px,
+  'small': 769px,
+  'medium': 992px,
+  'large': 1200px,
+);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (min-width: $device) {
+        @content;
+    }
+}
+
+@mixin media-query-bound( $low, $high ) {
+  @media screen and ( min-width: $low ) and ( max-width: $high ) {
+    @content;
+  }
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+  "base",
+  "layout",
+  "syntax-highlighting",
+  "header",
+  "index",
+  "page-layout",
+  "projects",
+  "blog",
+  "footer"
+;

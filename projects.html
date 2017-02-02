@@ -1,0 +1,26 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+weight: 1
+---
+
+{% for project in site.data.projects %}
+  <div class='project-container'>
+    <img src="{{ project.img }}">
+    <h1 class='project-title'>{{ project.title }}</h1>
+
+    <ul class='project-links'>
+      <li><a href={{ project.source_url }}>source</a></li>
+      {% if project.live_url %}
+      <li class='project-links-divide'>//</li>
+      <li><a href={{ project.live_url }}>live</a></li>
+      {% endif %}
+    </ul>
+
+    <div class='project-description'>
+      <p>{{ project.description }}</p>
+      <p><span class='tech-title'>Tech:</span> {{ project.tech }}</p>
+    </div>
+  </div>
+{% endfor %}

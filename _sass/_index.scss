@@ -1,0 +1,128 @@
+/*** INDEX ***/
+
+// Main image
+.main-image {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  padding-top: 100px;
+  background-image: url( ../img/computer.jpg );
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.main-title {
+  position: relative;
+  top: 50px;
+  padding: 30px 0;
+  text-align: center;
+  background: rgba(255,255,255,0.4);
+
+  @include media-query( #{map-get( $breakpoints, 'large' )} ) {
+    background: transparent;
+    text-align: right;
+  }
+
+  @include media-query-bound( #{map-get( $breakpoints, 'small' )}, 1199px ) {
+    margin-right: 20px;
+    background: transparent;
+    text-align: right;
+  }
+
+  @include media-query-bound( #{map-get( $breakpoints, 'x-small' )}, 767px ) {
+    top: 94px;
+  }
+
+  h1 {
+    margin-bottom: 0;
+    font-family: $primary-font;
+    font-size: 55px;
+
+    @include media-query( #{map-get( $breakpoints, 'medium' )} ) {
+      font-size: 80px;
+    }
+
+    @include media-query-bound( #{ map-get( $breakpoints, 'x-small' ) }, 991px ) {
+      font-size: 75px;
+    }
+
+    @include media-query-bound( #{ map-get( $breakpoints, 'x-small' ) }, 479px ) {
+      font-size: 60px;
+    }
+  }
+
+  p {
+    margin-top: -10px;
+    color: $lime-green;
+    font-family: $primary-font;
+    font-size: 25px;
+
+    @include media-query( #{map-get( $breakpoints, 'x-small' )} ) {
+      font-size: 30px;
+    }
+  }
+}
+
+// About section
+#about {
+  width: 100%;
+  margin: 100px 0 50px 0;
+  font-family: $primary-font;
+
+  .main-headshot {
+    height: 300px;
+    border: 1px solid $lime-green;
+    border-radius: 50%;
+  }
+
+  h1 {
+    border-bottom: 1px solid $lime-green;
+    padding: 30px 0;
+  }
+
+  .skills-icons {
+    margin-top: 30px;
+
+    .tech-icon {
+      height: 75px;
+      width: 8%;
+      margin-bottom: 20px;
+
+      path {
+        fill: $black;
+      }
+    }
+  }
+
+  .about-text {
+    max-width: 950px;
+    margin: 0 auto;
+    text-align: justify;
+  }
+}
+
+// Not in use
+// .scroll-icon {
+//   position: relative;
+//   width: 100%;
+//   height: 60px;
+//   top: 50%;
+//
+//   @include media-query( #{map-get( $breakpoints, 'small' )} ) {
+//     top: 87%;
+//   }
+//
+//   .fa-arrow-circle-o-down {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     transition: color 0.5s ease;
+//     cursor: pointer;
+//
+//     &:hover {
+//       color: $lime-green;
+//     }
+//   }
+// }

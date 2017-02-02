@@ -1,0 +1,47 @@
+/*** PROJECTS ***/
+
+.project-container {
+  display: inline-block;
+  width: 100%;
+  float: left;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  &:not( :last-child ) {
+    margin-bottom: 30px;
+  }
+
+  @include media-query( #{map-get( $breakpoints, 'medium' )} ) {
+    width: 50%;
+  }
+
+  @include media-query( #{map-get( $breakpoints, 'small' )} ) {
+    margin-bottom: 30px;
+  }
+
+  .project-title {
+    color: $lime-green;
+  }
+
+  .project-links {
+    list-style: none;
+    margin-left: 0;
+
+    li {
+      display: inline-block;
+
+      &:not( :first-child ) {
+        margin-left: 5px;
+      }
+
+      &.project-links-divide {
+        color: $lime-green;
+      }
+    }
+  }
+
+  .tech-title {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+}
